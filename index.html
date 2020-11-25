@@ -17,15 +17,15 @@
       <canvas id="covidChart" width="1600" height="900"></canvas>
       </div>
     <script>
-      var places = ["Living Room","Bedroom","Kitchen","Grocery Store","Outdoors"]
+      var places = ["Living Room","Bedroom","Kitchen","Grocery Store","Outdoors"];
       //During
-      var durChianYu = [2,6,1,2,6]
-      var durTom = [2,6,.5,1,2]
-      var durHeather = [4,4,2,2,2]
+      var durChianYu = [2,6,1,2,6];
+      var durTom = [2,6,.5,1,2];
+      var durHeather = [4,4,2,2,2];
       //Pre Covid
-       var preChianYu = [2,6,1,2,6]
-       var preTom = [2,6,.5,1,2 ] 
-       var preHeather = 4,4 ,2,2,2]
+       var preChianYu = [2,6,1,2,6];
+       var preTom = [2,6,.5,1,2 ]; 
+       var preHeather = 4,4 ,2,2,2];
       var ctx = getElementById('precovidChart');     
       var radarChart = new Chart(ctx, {
           type: 'radar',
@@ -34,21 +34,21 @@
             datasets:[
             {
               data: durChianYu,
-              label:'Chiun Yu'
-              borderColor:'black',
-              fill: 'purple
+              label:"Chian Yu"
+              borderColor:"black",
+              backgroundColor: "purple"
             },
             {
               data:durTom,
               label:'Tom',
               borderColor:'black',
-              fill:'blue'
+              backgroundColor:"blue"
             },
             {
               data:durHeather,
-              label: 'Heather',
-              borderColor:'black',
-              fill:'green'
+              label: "Heather",
+              borderColor:"black",
+              backgroundColor:'green'
           }]
       });
       
@@ -61,21 +61,21 @@
             datasets:[
             {
               data: preChianYu,
-              label:'Chiun Yu'
-              borderColor:'black',
-              fill: 'purple
+              label:"Chiun Yu"
+              borderColor:"black",
+              backgroundColor: "purple"
             },
             {
               data:preTom,
-              label:'Tom',
-              borderColor:'black',
-              fill:'blue'
+              label:"Tom",
+              borderColor:"black",
+              backgroundColor:"blue"
             },
             {
               data:preHeather,
-              label: 'Heather',
-              borderColor:'black',
-              fill:'green'
+              label: "Heather",
+              borderColor:"black",
+              backgroundColor:"green"
            }];
           }
         });
