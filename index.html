@@ -9,35 +9,77 @@
   <body>
     <div class="wrapper">
       <h1>The Covid Shift</h1>
-      <h2>What have we done with our time?</h2>
-      <canvas id="myChart" width="1600" height="900"></canvas>
+      <h2>Where did we used to spend our time?</h2>
+      <canvas id="precovidChart" width="1600" height="900"></canvas>
+      
+      <h1>The Covid Shift</h1>
+      <h2>Where do we spend our time now?</h2>
+      <canvas id="covidChart" width="1600" height="900"></canvas>
       </div>
     <script>
       var places = ["Living Room","Bedroom","Kitchen","Grocery Store","Outdoors"]
       //During
-      var durChiunYu = [2,6+,1,2,6+]
-      var durTom = [2,6+,.5,1,2]
+      var durChianYu = [2,6,1,2,6]
+      var durTom = [2,6,.5,1,2]
       var durHeather = [4,4,2,2,2]
       //Pre Covid
-       var preChiunYu = [2,6+,1,2,6+]
-       var preTom = [2,6+,.5,1,2 ] 
+       var preChianYu = [2,6,1,2,6]
+       var preTom = [2,6,.5,1,2 ] 
        var preHeather = 4,4 ,2,2,2]
-      var myChart = new Chart(ctx, {
+      var ctx = getElementById('precovidChart');     
+      var radarChart = new Chart(ctx, {
           type: 'radar',
           data: {
-            
-            labels:"Places"
-            datasets:places
+            labels:places
+            datasets:[
             {
-            data: durChiunYu
-            label:"Chiun Yu"
-            borderColor:"red"
-            fill:
-          },
-            
-           
-          },
+              data: durChianYu,
+              label:'Chiun Yu'
+              borderColor:'black',
+              fill: 'purple
+            },
+            {
+              data:durTom,
+              label:'Tom',
+              borderColor:'black',
+              fill:'blue'
+            },
+            {
+              data:durHeather,
+              label: 'Heather',
+              borderColor:'black',
+              fill:'green'
+          }]
       });
+      
+      
+           var ctx = getElementById('precovidChart');     
+           var radarChart2 = new Chart(ctx, {
+          type: 'radar',
+          data: {
+            labels:places
+            datasets:[
+            {
+              data: preChianYu,
+              label:'Chiun Yu'
+              borderColor:'black',
+              fill: 'purple
+            },
+            {
+              data:preTom,
+              label:'Tom',
+              borderColor:'black',
+              fill:'blue'
+            },
+            {
+              data:preHeather,
+              label: 'Heather',
+              borderColor:'black',
+              fill:'green'
+           }];
+          }
+        });
+      
       </script>
       </body>
      </html>
