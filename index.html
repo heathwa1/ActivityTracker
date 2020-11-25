@@ -17,69 +17,77 @@
       <canvas id="covidChart" width="1600" height="900"></canvas>
       </div>
     <script>
-      var places = ["Living Room","Bedroom","Kitchen","Grocery Store","Outdoors"];
-      //During
-      var durChianYu = [2,6,1,2,6];
-      var durTom = [2,6,.5,1,2];
-      var durHeather = [4,4,2,2,2];
-      //Pre Covid
-       var preChianYu = [2,6,1,2,6];
-       var preTom = [2,6,.5,1,2 ]; 
-       var preHeather = 4,4 ,2,2,2];
-      var ctx = getElementById('precovidChart');     
-      var radarChart = new Chart(ctx, {
-          type: 'radar',
+//       var places = ["Living Room","Bedroom","Kitchen","Grocery Store","Outdoors"];
+//       //During
+//       var durChianYu = [2,6,1,2,6];
+//       var durTom = [2,6,.5,1,2];
+//       var durHeather = [4,4,2,2,2];
+//       //Pre Covid
+//        var preChianYu = [2,6,1,2,6];
+//        var preTom = [2,6,.5,1,2 ]; 
+//        var preHeather = 4,4 ,2,2,2];
+//       var ctx = getElementById("precovidChart");     
+//       var precovidChart = new Chart(ctx, {
+//           type: "radar",
+//           data: data: {
+//             labels:["Living Room", "Bedroom", "Kitchen","Grocery Store, "Outdoors"]'
+//             datasets:[{
+//             data:[20,10,4,2]
+//            }]
+//           }
+      var ctx = document.getElementById("precovidChart);
+      var radarChart= new Chart(ctx, { 
+          type:"radar",
           data: {
-            labels:places
-            datasets:[
-            {
-              data: durChianYu,
-              label:"Chian Yu"
-              borderColor:"black",
-              backgroundColor: "purple"
+            labels: ["Living Room", "Bedroom", "Kitchen", "Grocery Store", "Outdoors"],
+            datasets: [{
+              label: "Chain Yu",
+              borderColor: "black",
+              backgroundColor: "#652da6",
+              data: [2,6,1,2,6],
             },
             {
-              data:durTom,
-              label:'Tom',
-              borderColor:'black',
-              backgroundColor:"blue"
+             label: "Tom",
+             borderColor:"black",
+             backgroundColor: "#29912a",
+             data: [2,6,.5,1,2],
             },
             {
-              data:durHeather,
-              label: "Heather",
-              borderColor:"black",
-              backgroundColor:'green'
-          }]
-      });
-      
-      
-           var ctx = getElementById('precovidChart');     
-           var radarChart2 = new Chart(ctx, {
-          type: 'radar',
-          data: {
-            labels:places
-            datasets:[
-            {
-              data: preChianYu,
-              label:"Chiun Yu"
-              borderColor:"black",
-              backgroundColor: "purple"
-            },
-            {
-              data:preTom,
-              label:"Tom",
-              borderColor:"black",
-              backgroundColor:"blue"
-            },
-            {
-              data:preHeather,
-              label: "Heather",
-              borderColor:"black",
-              backgroundColor:"green"
-           }];
+             label:"Heather",
+             borderColor: "black",
+             backgroundColor: "#38a4cf",
+             data:[4,4,2,2,2],
+            }]
           }
-        });
-      
+       });
+                                        
+      var ctx = document.getElementById("covidChart");
+      var radarChart = new Chart(ctx, {
+          type: "radar",
+          data: {
+            labels: ["Living Room", "Bedroom", "Kitchen", "Grocery Store", "Outdoors"],
+            datasets: [{
+              label: "Chian Yu",
+              borderColor: "black",
+              backgroundColor: "#30125c",
+              data: [2,6,1,2,6]
+            }, 
+            {
+             label: "Tom",
+             borderColor: "black",
+             backgroundColor: "#479148",
+             data: [2,6,.5,1,2]
+            }, 
+            {
+             label: "Heather",
+             borderColor: "black",
+             backgroundColor: "#1c8c99",
+             data: [4,4,2,2,2]
+            }] 
+          } 
+      });
+             
+   
       </script>
       </body>
      </html>
