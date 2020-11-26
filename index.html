@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chart JS examples</title>
+    <title>Group 4 - Covid Radar Chart</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <div class="wrapper">
-      <h1>The Covid Shift</h1>
+      <h1>Pre-Covid</h1>
       <h2>Where did we used to spend our time?</h2>
       <canvas id="precovidChart" width="1600" height="900"></canvas>
-      
+
       <h1>The Covid Shift</h1>
       <h2>Where do we spend our time now?</h2>
       <canvas id="covidChart" width="1600" height="900"></canvas>
@@ -24,9 +24,9 @@
 //       var durHeather = [4,4,2,2,2];
 //       //Pre Covid
 //        var preChianYu = [2,6,1,2,6];
-//        var preTom = [2,6,.5,1,2 ]; 
+//        var preTom = [2,6,.5,1,2 ];
 //        var preHeather = 4,4 ,2,2,2];
-//       var ctx = getElementById("precovidChart");     
+//       var ctx = getElementById("precovidChart");
 //       var precovidChart = new Chart(ctx, {
 //           type: "radar",
 //           data: data: {
@@ -35,60 +35,65 @@
 //             data:[20,10,4,2]
 //            }]
 //           }
-      var ctx = document.getElementById("precovidChart);
-      var radarChart= new Chart(ctx, { 
+      var ctx = document.getElementById("precovidChart");
+      var radarChart= new Chart(ctx, {
           type:"radar",
           data: {
             labels: ["Living Room", "Bedroom", "Kitchen", "Grocery Store", "Outdoors"],
             datasets: [{
-              label: "Chain Yu",
+              label: "Chian-Yu",
               borderColor: "black",
-              backgroundColor: "#652da6",
+              pointBackgroundColor: "rgba(255,0,0,0.4)",
+              backgroundColor: "rgba(255,0,0,0.2)",
               data: [2,6,1,2,6],
             },
             {
              label: "Tom",
              borderColor:"black",
-             backgroundColor: "#29912a",
+             pointBackgroundColor: "rgba(0,255,0,0.4)",
+             backgroundColor: "rgba(0,255,0,0.2)",
              data: [2,6,.5,1,2],
             },
             {
              label:"Heather",
              borderColor: "black",
-             backgroundColor: "#38a4cf",
+             pointBackgroundColor: "rgba(0,0,255,0.4)",
+             backgroundColor: "rgba(0,0,255,0.2)",
              data:[4,4,2,2,2],
             }]
           }
        });
-                                        
+
       var ctx = document.getElementById("covidChart");
       var radarChart = new Chart(ctx, {
           type: "radar",
           data: {
             labels: ["Living Room", "Bedroom", "Kitchen", "Grocery Store", "Outdoors"],
             datasets: [{
-              label: "Chian Yu",
+              label: "Chian-Yu",
               borderColor: "black",
-              backgroundColor: "#30125c",
+              pointBackgroundColor: "rgba(255,0,0,0.4)",
+              backgroundColor: "rgba(255,0,0,0.2)",
               data: [2,6,1,2,6]
-            }, 
+            },
             {
              label: "Tom",
              borderColor: "black",
-             backgroundColor: "#479148",
+             pointBackgroundColor: "rgba(0,255,0,0.4)",
+             backgroundColor: "rgba(0,255,0,0.2)",
              data: [2,6,.5,1,2]
-            }, 
+            },
             {
              label: "Heather",
              borderColor: "black",
-             backgroundColor: "#1c8c99",
+             pointBackgroundColor: "rgba(0,0,255,0.4)",
+             backgroundColor: "rgba(0,0,255,0.2)",
              data: [4,4,2,2,2]
-            }] 
-          } 
+            }]
+          }
       });
-             
-   
+
+
       </script>
       </body>
      </html>
-     
